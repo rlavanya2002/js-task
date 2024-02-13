@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorting and center</title>
+</head>
+<button onclick="findMedian()">CLICK</button>
+<p id="sort"></p>
+<body>
+    <script>
+    let marks = [12, 25, 31, 23, 75, 81, 100,56,0,0.1,0.3];
+    document.write("Original Array:","<br>",marks,"<br>");
+    marks.sort(function (a, b) { return a - b });
+    document.write("After sorting in Ascending order:","<br>",marks,"<br>");
+    document.write("<br>","array length is: " + marks.length,"<br>");
+    let middle = Math.floor(marks.length / 2);
+    
+    function findMedian () {
+  if(marks.length % 2 === 0) {
+    document.write("<br>","middle nums when array length is even: " + marks[middle - 1]  + " " + marks[middle],"<br>");
+  } else {
+    document.write("<br>","middle num when array length is odd: " + marks[middle],"<br>");
+  }
+}
+
+</script>
+</body>
+</html>

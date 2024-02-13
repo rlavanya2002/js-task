@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Consonants and Vowels</title>
+    </head>
+    <body>
+    <script>
+const str = prompt("Enter a string:");
+const res = { Vowels: 0, Consonants: 0 };
+const VOWELS = ["a", "e", "i", "o", "u"];
+
+for (let char of str) {
+  if (/[a-zA-Z]/.test(char)) { // check if the character is an alphabet
+    if (VOWELS.includes(char.toLowerCase())) {
+      res["Vowels"]++;
+    } else {
+      res["Consonants"]++;
+    }
+  }
+}
+
+document.write("Number of vowels:", res["Vowels"],"<br>");
+document.write("Number of consonants:", res["Consonants","<br>"]);
+
+    </script>
+
+
+</body>
+</html>

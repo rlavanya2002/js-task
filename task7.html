@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse string</title>
+</head>
+<button onclick="checkString()">submit</button>
+<body>
+    <script>
+
+function checkString(X, Y) {
+    let n = X.length;
+    for (let i = 0; i < n; i++) {
+        for (let j = i; j < n; j++) {
+            let reversed = X.slice(i, j + 1).split('').reverse().join('');
+            let newX = X.slice(0, i) + reversed + X.slice(j + 1);
+            if (newX === Y) {
+                console.log("Yes");
+                return true;
+            }
+        }
+    }
+    console.log("No");
+    return false;
+}
+let X="haai";
+let Y="iaah";
+checkString(X, Y);
+
+</script>
+</body>
+</html>
